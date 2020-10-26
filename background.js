@@ -7,7 +7,7 @@
             text: String(price)
         });
 		chrome.browserAction.setTitle({
-            title: 'MOON!'
+            title: String(price)
         });
     }
     function updateBadge() {
@@ -22,7 +22,6 @@
 			if(price>=prevPrice){
 			setupBadge(up);}else{setupBadge(!up);}
 			prevPrice=price;
-
         };
         xhr.send();
     }
